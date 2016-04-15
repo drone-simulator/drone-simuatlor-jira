@@ -1,5 +1,5 @@
 jira:
-  build: cptactionhank/atlassian-jira-software
+  image: cptactionhank/atlassian-jira-software
   ports:
     - 8085:8085
   environment:
