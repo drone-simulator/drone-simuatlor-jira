@@ -1,5 +1,7 @@
 jira:
   build: cptactionhank/atlassian-jira-software
+  ports:
+    - 8085:8085
   environment:
     X_PROXY_NAME: nginx
     X_PROXY_PORT: 8085
