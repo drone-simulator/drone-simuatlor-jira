@@ -1,7 +1,7 @@
 jira:
   image: cptactionhank/atlassian-jira-software
   ports:
-    - 8085:8085
+    - 127.0.0.1:8085:8085
   environment:
     X_PROXY_NAME: nginx
     X_PROXY_PORT: 8085
@@ -9,3 +9,12 @@ jira:
   volumes:
     - /var/atlassian/jira:/var/atlassian/jira
     - /opt/atlassian/jira/logs:/opt/atlassian/jira/logs
+mysql:
+  build: docker/mysql
+  ports:
+    - 127.0.0.1:3311:3311
+  environment:
+    MYSQL_ROOT_PASSWORD: dronesimjira
+    MYSQL_DATABASE: dronesimjira
+    MYSQL_USER: dronesimjira
+    MYSQL_PASSWORD: dronesimjira
