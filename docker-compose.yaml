@@ -10,7 +10,7 @@ mysql:
 jira:
   image: cptactionhank/atlassian-jira-software
   ports:
-    - 127.0.0.1:8085:8085
+    - 8085:8085
   environment:
     X_PROXY_NAME: nginx
     X_PROXY_PORT: 8085
