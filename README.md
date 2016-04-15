@@ -1,1 +1,1 @@
-drone-simuatlor-jira
+# Docker config for Drone Simulator JIRA

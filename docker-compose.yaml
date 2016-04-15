@@ -1,0 +1,9 @@
+jira:
+  build: cptactionhank/atlassian-jira-software
+  environment:
+    X_PROXY_NAME: nginx
+    X_PROXY_PORT: 8085
+    X_PROXY_SCHEME: https
+  volumes:
+    - /var/atlassian/jira:/var/atlassian/jira
+    - /opt/atlassian/jira/logs:/opt/atlassian/jira/logs
