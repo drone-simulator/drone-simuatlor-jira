@@ -1,3 +1,12 @@
+mysql:
+  build: docker/mysql
+  ports:
+    - 127.0.0.1:3311:3311
+  environment:
+    MYSQL_ROOT_PASSWORD: dronesimjira
+    MYSQL_DATABASE: dronesimjira
+    MYSQL_USER: dronesimjira
+    MYSQL_PASSWORD: dronesimjira
 jira:
   image: cptactionhank/atlassian-jira-software
   ports:
@@ -9,12 +18,5 @@ jira:
   volumes:
     - /var/atlassian/jira:/var/atlassian/jira
     - /opt/atlassian/jira/logs:/opt/atlassian/jira/logs
-mysql:
-  build: docker/mysql
-  ports:
-    - 127.0.0.1:3311:3311
-  environment:
-    MYSQL_ROOT_PASSWORD: dronesimjira
-    MYSQL_DATABASE: dronesimjira
-    MYSQL_USER: dronesimjira
-    MYSQL_PASSWORD: dronesimjira
+  links:
+    - mysql
