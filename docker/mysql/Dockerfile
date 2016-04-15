@@ -9,6 +9,6 @@ ADD dronesimjira.sql /tmp/dronesimjira.sql
 RUN /bin/bash -c "/usr/bin/mysqld_safe &" && \
   sleep 6 && \
   mysql -u dronesimjira -p dronesimjira -e "CREATE DATABASE dronesimjira" && \
-  mysql -u root dronesimjira < /tmp/dronesimjira.sql
+  mysql -u dronesimjira -p dronesimjira dronesimjira < /tmp/dronesimjira.sql
 
 EXPOSE 3311
