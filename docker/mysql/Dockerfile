@@ -1,5 +1,6 @@
 # MySQL container for the database
-FROM mysql:5.7
+# Using 5.6 because JIRA is junk
+FROM mysql:5.6
 MAINTAINER Colin Campbell <colin@colincampbell.me>
 
 # Change port to 3311
