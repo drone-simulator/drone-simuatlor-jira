@@ -12,8 +12,8 @@ jira:
   ports:
     - 127.0.0.1:8085:8080
   environment:
-    X_PROXY_NAME: nginx
-    X_PROXY_PORT: 8085
+    X_PROXY_NAME: jira.colincampbell.me
+    X_PROXY_PORT: 443
     X_PROXY_SCHEME: https
   volumes:
     - /var/jira/home:/var/atlassian/jira
