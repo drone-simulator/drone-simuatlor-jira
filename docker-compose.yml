@@ -7,6 +7,7 @@ mysql:
     MYSQL_DATABASE: dronesimjira
     MYSQL_USER: dronesimjira
     MYSQL_PASSWORD: dronesimjira
+  restart: always
 jira:
   image: cptactionhank/atlassian-jira-software
   ports:
@@ -20,3 +21,4 @@ jira:
     - /var/jira/logs:/opt/atlassian/jira/logs
   links:
     - mysql
+  restart: always
